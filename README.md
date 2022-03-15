@@ -1,2 +1,2 @@
 # CRJA-analysis
-hi this is pretty empyt but it will hold analysis of police data relevant tot he California Racial Justice Act
+the notebook for this (W22 Cogs 99) project is called "CRJA + SDPD Ripa Data" :)
