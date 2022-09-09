@@ -67,7 +67,7 @@ def loadRIPA(base='https://seshat.datasd.org/pd/'):
     prop_seize_type_df = pd.read_csv(base+"ripa_prop_seize_type_datasd.csv",
                                  converters = {"type_of_property_seized": convert_dtype_string})
 
-    
+
     # put it all together
     result_df = pd.merge(disability_df, gender_df, how="outer", on=["stop_id","pid"])
     result_df = pd.merge(result_df, race_df, how="outer", on=["stop_id","pid"])
@@ -75,7 +75,7 @@ def loadRIPA(base='https://seshat.datasd.org/pd/'):
     result_df = pd.merge(result_df, stop_reason_df, how="outer", on=["stop_id","pid"])
     result_df = pd.merge(result_df, stop_details_df, how="outer", on=["stop_id","pid"])
     result_df = pd.merge(result_df, search_basis_df, how="outer", on=["stop_id","pid"])
-    result_df = pd.merge(result_df, contradband_df, how="outer", on=["stop_id","pid"])
+    result_df = pd.merge(result_df, contraband_df, how="outer", on=["stop_id","pid"])
     result_df = pd.merge(result_df, prop_seize_basis_df, how="outer", on=["stop_id","pid"])
     result_df = pd.merge(result_df, prop_seize_type_df, how="outer", on=["stop_id","pid"])
 
