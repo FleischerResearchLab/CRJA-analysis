@@ -1,0 +1,60 @@
+<div class="card-item col">
+  {%- if people.redirect -%}
+  <a href="{{ people.redirect }}" target="_blank">
+  {%- else -%}
+  <a href="{{ people.url | relative_url }}">
+  {%- endif -%}
+    <div class="card hoverable">
+      <div class="row g-0">
+        {%- if people.img -%}
+        <div class="card-img col-md-6">
+          {% include figure.html path=people.img alt="people thumbnail" %}
+        </div>
+        <div class="col-md-6">
+        {%- else -%}
+        <div class="col-md-12">
+        {%- endif -%}
+          <div class="card-body">
+            <h3 class="card-title">{{ people.title }}</h3>
+            <p class="card-text">{{ people.description }}</p>
+            <div class="row ">
+              <div class = "col-auto">
+              {%- if people.github -%}
+                <div class="github-icon">
+                  <div class="icon" data-toggle="tooltip" title="Code Repository">
+                    <a href="https://github.com/{{ people.github}}" title="GitHub"><i class="fab fa-github gh-icon"></i></a>
+                  </div>
+                  {%- if people.github_stars -%}
+                  <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                    <i class="fas fa-star"></i>
+                    <span id="{{ people.github_stars }}-stars"></span>
+                  </span>
+                  {%- endif -%} 
+                </div>
+              </div>
+              {%- endif -%}
+              {%- if people.email -%}
+              <div class = "col-auto">
+                <div class="email-icon">
+                  <div class="icon" data-toggle="tooltip" title="Email">
+                    <a href="mailto:{{ people.email | encode_email }}" title="email"><i class="fas fa-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              {%- endif -%}
+              {%- if people.linkedin -%}
+              <div class = "col-auto">
+                <div class="linkedin-icon">
+                  <div class="icon" data-toggle="tooltip" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/{{ people.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
