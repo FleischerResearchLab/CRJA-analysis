@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jason F. Fleischer
+title: Jason G. Fleischer
 description: Assistant Teaching Professor in Cognitive Science@ UC San Diego
 img: /assets/img/Jason.jpg
 importance: 2
