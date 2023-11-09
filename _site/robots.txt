@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/crja/sitemap.xml
+Sitemap: http://localhost:4000/CRJA-analysis/sitemap.xml
